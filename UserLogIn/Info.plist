@@ -2,7 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GID</key>
+	<key>GIDClientID</key>
 	<string>408687945864-cbc692iv1jb2ks4r226lh0khrji7spq6.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.408687945864-cbc692iv1jb2ks4r226lh0khrji7spq6</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
