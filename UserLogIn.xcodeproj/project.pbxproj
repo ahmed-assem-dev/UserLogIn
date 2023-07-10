@@ -18,6 +18,7 @@
 		C88823052A5ACD130021B614 /* LogInButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88823042A5ACD130021B614 /* LogInButtons.swift */; };
 		C88823092A5AEF1F0021B614 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88823082A5AEF1F0021B614 /* LogInView.swift */; };
 		C888230B2A5AEFEE0021B614 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888230A2A5AEFEE0021B614 /* HomeView.swift */; };
+		C888230D2A5BD2580021B614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888230C2A5BD2580021B614 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		C88823062A5AE0AB0021B614 /* UserLogIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserLogIn.entitlements; sourceTree = "<group>"; };
 		C88823082A5AEF1F0021B614 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C888230A2A5AEFEE0021B614 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C888230C2A5BD2580021B614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C88823102A5BD5950021B614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 		C88822EA2A5AC7580021B614 /* UserLogIn */ = {
 			isa = PBXGroup;
 			children = (
+				C88823102A5BD5950021B614 /* Info.plist */,
 				C88823072A5AEF100021B614 /* Views */,
 				C88823062A5AE0AB0021B614 /* UserLogIn.entitlements */,
 				C88823032A5ACCF20021B614 /* components */,
@@ -74,6 +78,7 @@
 				C88822F92A5AC8140021B614 /* GoogleService-Info.plist */,
 				C88822EF2A5AC75A0021B614 /* Assets.xcassets */,
 				C88822F12A5AC75A0021B614 /* Preview Content */,
+				C888230C2A5BD2580021B614 /* AppDelegate.swift */,
 			);
 			path = UserLogIn;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C888230D2A5BD2580021B614 /* AppDelegate.swift in Sources */,
 				C88823052A5ACD130021B614 /* LogInButtons.swift in Sources */,
 				C88822EE2A5AC7580021B614 /* ContentView.swift in Sources */,
 				C88823092A5AEF1F0021B614 /* LogInView.swift in Sources */,
@@ -320,6 +326,7 @@
 				DEVELOPMENT_TEAM = P3844XHP8L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UserLogIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -350,6 +357,7 @@
 				DEVELOPMENT_TEAM = P3844XHP8L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UserLogIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

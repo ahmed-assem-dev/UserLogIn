@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var signedIn: Bool = false
-    @State var theUser: AppleUser = AppleUser.sample
+    @State var theUser: User = User.sample
     
     var body: some View {
 
@@ -22,7 +22,7 @@ struct ContentView: View {
             Button{
                 withAnimation {
                     signedIn = false
-                    theUser = AppleUser.sample
+                    theUser = User.sample
                 }
                 
             }label: {
