@@ -19,6 +19,7 @@
 		C88823092A5AEF1F0021B614 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88823082A5AEF1F0021B614 /* LogInView.swift */; };
 		C888230B2A5AEFEE0021B614 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888230A2A5AEFEE0021B614 /* HomeView.swift */; };
 		C888230D2A5BD2580021B614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888230C2A5BD2580021B614 /* Extensions.swift */; };
+		C88823122A5C178F0021B614 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88823112A5C178F0021B614 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C888230A2A5AEFEE0021B614 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C888230C2A5BD2580021B614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C88823102A5BD5950021B614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C88823112A5C178F0021B614 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C88823042A5ACD130021B614 /* LogInButtons.swift */,
+				C88823112A5C178F0021B614 /* CardView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88823122A5C178F0021B614 /* CardView.swift in Sources */,
 				C888230D2A5BD2580021B614 /* Extensions.swift in Sources */,
 				C88823052A5ACD130021B614 /* LogInButtons.swift in Sources */,
 				C88822EE2A5AC7580021B614 /* ContentView.swift in Sources */,

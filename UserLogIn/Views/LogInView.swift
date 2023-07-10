@@ -44,18 +44,21 @@ struct LogInView: View {
     @Binding var signedIn: Bool
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        VStack {
-            SignInWithAppleButton(.signIn ,onRequest: configureAppleLogIn, onCompletion: handleAppleLogIn)
-                .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-                .frame(width:240, height: 45)
-                .padding()
-            //            LogInButtons()
-            GoogleSignInButton(action: handleGoogleSignIn)
-                .frame(width: 240,height: 45)
-            
-            
+        ZStack{
+            CardView()
+            VStack {
+                SignInWithAppleButton(.signIn ,onRequest: configureAppleLogIn, onCompletion: handleAppleLogIn)
+                    .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+                    .frame(width:240, height: 45)
+                    .padding()
+                //            LogInButtons()
+                GoogleSignInButton(action: handleGoogleSignIn)
+                    .frame(width: 240,height: 45)
+                
+                
+            }
+            .padding()
         }
-        .padding()
     }
     
     func configureAppleLogIn(_ request: ASAuthorizationAppleIDRequest){
