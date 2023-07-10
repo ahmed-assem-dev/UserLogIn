@@ -4,6 +4,12 @@
 <dict>
 	<key>GIDClientID</key>
 	<string>408687945864-cbc692iv1jb2ks4r226lh0khrji7spq6.apps.googleusercontent.com</string>
+	<key>FacebookAppID</key>
+	<string>667897515192475</string>
+	<key>FacebookClientToken</key>
+	<string>942be2c52fe2f8102fcccfe9c6a4e6b5</string>
+	<key>FacebookDisplayName</key>
+	<string>UserLogIn</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -12,6 +18,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.408687945864-cbc692iv1jb2ks4r226lh0khrji7spq6</string>
+				<string>fb667897515192475</string>
 			</array>
 		</dict>
 	</array>

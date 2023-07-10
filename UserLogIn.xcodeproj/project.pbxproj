@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81486452A5C9B91000152F8 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C81486442A5C9B91000152F8 /* FacebookLogin */; };
 		C88822EC2A5AC7580021B614 /* UserLogInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88822EB2A5AC7580021B614 /* UserLogInApp.swift */; };
 		C88822EE2A5AC7580021B614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88822ED2A5AC7580021B614 /* ContentView.swift */; };
 		C88822F02A5AC75A0021B614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88822EF2A5AC75A0021B614 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81486452A5C9B91000152F8 /* FacebookLogin in Frameworks */,
 				C88823022A5AC8E90021B614 /* GoogleSignInSwift in Frameworks */,
 				C88822FD2A5AC8AD0021B614 /* FirebaseAuth in Frameworks */,
 				C88823002A5AC8E90021B614 /* GoogleSignIn in Frameworks */,
@@ -131,6 +133,7 @@
 				C88822FC2A5AC8AD0021B614 /* FirebaseAuth */,
 				C88822FF2A5AC8E90021B614 /* GoogleSignIn */,
 				C88823012A5AC8E90021B614 /* GoogleSignInSwift */,
+				C81486442A5C9B91000152F8 /* FacebookLogin */,
 			);
 			productName = UserLogIn;
 			productReference = C88822E82A5AC7580021B614 /* UserLogIn.app */;
@@ -163,6 +166,7 @@
 			packageReferences = (
 				C88822FB2A5AC8AD0021B614 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C88822FE2A5AC8E90021B614 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C81486432A5C9B91000152F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = C88822E92A5AC7580021B614 /* Products */;
 			projectDirPath = "";
@@ -406,6 +410,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C81486432A5C9B91000152F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
 		C88822FB2A5AC8AD0021B614 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -425,6 +437,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C81486442A5C9B91000152F8 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C81486432A5C9B91000152F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		C88822FC2A5AC8AD0021B614 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C88822FB2A5AC8AD0021B614 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

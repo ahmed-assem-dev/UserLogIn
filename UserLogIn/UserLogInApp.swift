@@ -7,6 +7,7 @@
 
 import SwiftUI
 import GoogleSignIn
+import FacebookLogin
 
 @main
 struct UserLogInApp: App {
@@ -16,6 +17,10 @@ struct UserLogInApp: App {
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }
+                .onAppear(){
+                    ApplicationDelegate.shared.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
+                }
+            
         }
     }
 }

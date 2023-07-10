@@ -9,6 +9,7 @@ import AuthenticationServices
 import SwiftUI
 import GoogleSignIn
 import GoogleSignInSwift
+import FacebookLogin
 
 struct User:Codable {
     let userID: String
@@ -42,6 +43,8 @@ struct User:Codable {
 struct LogInView: View {
     @Binding var theUser: User
     @Binding var signedIn: Bool
+    @State var manager = LoginManager()
+    
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ZStack{
@@ -54,6 +57,24 @@ struct LogInView: View {
                 //            LogInButtons()
                 GoogleSignInButton(action: handleGoogleSignIn)
                     .frame(width: 240,height: 45)
+                Button{
+                    handleFacebookSignIn()
+                }label: {
+                    HStack(spacing: 10){
+                    
+                        Image("fbicon")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                        Text("Sign In with fb")
+                    }
+                        
+                }
+                .frame(width:240, height: 45)
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .padding()
+                
                 
                 
             }
@@ -125,7 +146,37 @@ struct LogInView: View {
             }
         
     }
-}
+    func handleFacebookSignIn(){
+        manager.logIn(permissions: ["public_profile"], from: nil){ (result, err) in
+            if err != nil {
+                print("Error Occured", err!.localizedDescription)
+                return
+            }else{
+                let request = GraphRequest(graphPath: "me", parameters: ["fields": "id,name,picture.type(large)"])
+                request.start { (_, result, error) in
+                    if let error = error {
+                        print("Error getting profile: \(error.localizedDescription)")
+                        return
+                    }
+                    guard let result = result as? [String: Any],
+                          let name = result["name"] as? String,
+                        let userID = result["id"] as? String
+                    else {
+                              print("Error parsing profile data")
+                              return
+                          }
+                    print("Name: \(name)")
+                    print("ID: \(userID)")
+                    let FBUser = User(id: userID, firstName: name, lastName: "", email: "")
+                    theUser = FBUser!
+                    signedIn = true
+                    
+                }
+                }
+            }
+        }
+    }
+
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {

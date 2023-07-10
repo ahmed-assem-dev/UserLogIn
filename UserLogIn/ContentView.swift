@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import FacebookLogin
 
 
 
 struct ContentView: View {
     @State var signedIn: Bool = false
     @State var theUser: User = User.sample
-    
+    @State var manager = LoginManager()
+
     var body: some View {
 
         if(signedIn){
@@ -23,6 +25,8 @@ struct ContentView: View {
                 withAnimation {
                     signedIn = false
                     theUser = User.sample
+                    manager.logOut()
+                    
                 }
                 
             }label: {
